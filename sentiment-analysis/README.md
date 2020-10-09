@@ -4,7 +4,7 @@ Sentiment analysis is an http service that uses [TensorFlow.js](https://www.tens
 
 ## Format
 The service accepts POST requests at `/toxicity` containing the following json body:
-```
+```json
 {
     "sentences": [
         "This is a bad sentence!"
@@ -14,7 +14,7 @@ The service accepts POST requests at `/toxicity` containing the following json b
 ```
 
 It expects a response in the format:
-```
+```json
 [
     {
         "label": "This is a bad sentence!",
@@ -64,7 +64,7 @@ The `$BASE_URL` environment variable can be optionally set, otherwise will defau
 ## Usage
 
 You can run the service locally by running 
-```
+```sh
 npm install
 npx spago run
 # or
@@ -76,12 +76,12 @@ The service by default listens on host `0.0.0.0` and port `9000`, but this can b
 
 To facilitate deployment of this service, a [Dockerfile](./docker/Dockerfile) has been provided that can be used for the deployment, e.g.:
 
-```
+```sh
 docker build -t="hivemind/sentiment-analysis" -f docker/Dockerfile .
 docker run -ti -p 9000:9000 -e HOST=0.0.0.0 -e PORT=9000 hivemind/sentiment-analysis:latest        
 ```
 
 Test it e.g. using [httpie](https://httpie.org):
-```
+```sh
 http -v POST http://localhost:9000/toxicity threshold:=0.9 sentences:='["This is a bad sentence!"]'
 ```

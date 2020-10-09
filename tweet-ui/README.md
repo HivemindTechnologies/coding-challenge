@@ -49,5 +49,6 @@ To deploy the ui as a service, you can use the provided [Dockerfile](./docker/Do
 
 ```sh
 docker build -t="hivemind/tweet-ui" -f docker/Dockerfile .
-docker run -ti -p 9000:9000 -e BASE_URL=http://localhost:8080 hivemind/tweet-ui:lates
+docker run -ti -p 9000:9000 -e BASE_URL=http://localhost:8080 hivemind/tweet-ui:latest
 ```
+and open `http://localhost:9000`

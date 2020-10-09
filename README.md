@@ -17,6 +17,7 @@ Upon completion, you are asked to deploy the infrastructure in the cloud using i
 ## Services
 
 * [tweet ui](./tweet-ui/README.md)
+* [tweet api](./tweet-api/README.md) 👈🏾 this is what you should fill with life
 * [sentiment analysis](./sentiment-analysis/README.md)
 
 ## Resources

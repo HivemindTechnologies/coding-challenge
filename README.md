@@ -10,10 +10,11 @@ Your team has already defined an architecture consisting of a single-page-app ui
 **Task**
 The ui and the sentiment analysis service have already been developed in the previous sprint and are thus ready to use. You are tasked with the development of the backend http api that serves the ui and calls the sentiment analysis. The team leaves it up to you to choose the programming language for this task, but since they are big functional programming geeks, they recommend you to use a functional programming language.
 
-Upon completion, you are asked to deploy the infrastructure in the cloud as infrastructure as code (IaC). The usage of the cloud provider & programming language is up to you, but the team recommends you AWS and CDK.
+Upon completion, you are asked to deploy the infrastructure in the cloud using infrastructure as code (IaC). The usage of the cloud provider & programming language is up to you, but if you don't know what to use a good choice is AWS and CDK.
 
 **Services**
 * [tweet ui](./tweet-ui/README.md)
+* [sentiment analysis](./sentiment-analysis/README.md)
 
 ## Resources
 

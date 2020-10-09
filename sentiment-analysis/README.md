@@ -66,7 +66,7 @@ The `$BASE_URL` environment variable can be optionally set, otherwise will defau
 You can run the service locally by running 
 ```
 npm install
-npm spago run
+npx spago run
 # or
 HOST=0.0.0.0 PORT:9001 npx spago run
 ```

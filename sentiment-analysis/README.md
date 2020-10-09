@@ -68,7 +68,7 @@ You can run the service locally by running
 npm install
 npm spago run
 # or
-HOST=0.0.0.0 PORT:9001 npm run webpack:server
+HOST=0.0.0.0 PORT:9001 npx spago run
 ```
 The service by default listens on host `0.0.0.0` and port `9000`, but this can be configured using the environment variables `HOST` and `PORT`
 

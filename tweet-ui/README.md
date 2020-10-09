@@ -34,13 +34,13 @@ To bundle the ui for static website deployment, run
 ```
 npm install
 npm run webpack:bundle
+# or
+BASE_URL=http://localhost:8080 npm run webpack:bundle
 ```
 This will bundle the html and js files into the `dist/` folder which you can then deploy.
 To test that the site works, run 
 ```
 npm run serve
-# or
-BASE_URL=http://localhost:8080 npm run serve
 ```
 and open `http://localhost:9000`
 

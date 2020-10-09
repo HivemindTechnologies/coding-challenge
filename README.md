@@ -1,6 +1,6 @@
 # Hivemind's Coding Challenge
 
-Welcome to the Hivemind coding challenge. This challenge consists of the development a simple microservice (or function/lambda) and the deployment of the architecture in the cloud (e.g. AWS).
+Welcome to the Hivemind coding challenge. This challenge consists of the development of a simple microservice (or cloud function/lambda) and the deployment of the architecture in the cloud (e.g. AWS).
 
 ## Story
 

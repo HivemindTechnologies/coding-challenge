@@ -8,11 +8,11 @@ Hivemind's coding challenge consists in connecting two web services and deployin
 
 The team is tasked with the development of a simple web UI for sentiment analysis of tweets. The user shall be able to enter a tweet and the UI will return a thumbs up or down depending on the result of the analysis.
 
-Your team has already defined an architecture consisting of a single-page frontend app, a backend HTTP API and a sentiment analysis service. Since the sentiment analysis service shouldn't be accessible publicly, the frontend should request analyses via the backend HTTP API.
+Your team has already defined an architecture consisting of a single-page frontend app (dubbed `tweet-ui`), a backend HTTP API (`tweet-api`) and a sentiment analysis service (`sentiment-analysis`). Since the sentiment analysis service shouldn't be accessible publicly, the frontend should request analyses via the backend HTTP API.
 
 ## Tasks
 
-You are tasked with the development of the backend HTTP API that will be consumed by the frontend. It will serve as the intermediary between the frontend and the sentiment analysis service.
+You are tasked with the development of the `tweet-api` service that will be consumed by the frontend. It will serve as the intermediary between the frontend and the sentiment analysis service.
 
 The team leaves it up to you to choose the programming language for this task, but they are big functional programming geeks and frown upon anything else.
 

@@ -1,9 +1,11 @@
-# Sentiment analysis
+# Sentiment Analysis
 
-Sentiment analysis is an http service that uses [TensorFlow.js](https://www.tensorflow.org/js) to analysis sentences for sentiment. 
+Sentiment analysis is an HTTP service that uses [TensorFlow.js](https://www.tensorflow.org/js) to analyse sentences for sentiment.
 
 ## Format
-The service accepts POST requests at `/toxicity` containing the following json body:
+
+The service accepts POST requests at `/toxicity` containing the following JSON body:
+
 ```json
 {
     "sentences": [
@@ -13,7 +15,8 @@ The service accepts POST requests at `/toxicity` containing the following json b
 }
 ```
 
-It expects a response in the format:
+And outputs a response so:
+
 ```json
 [
     {
@@ -59,29 +62,32 @@ It expects a response in the format:
 ]
 ```
 
-The `$BASE_URL` environment variable can be optionally set, otherwise will default to empty string.
+The `$BASE_URL` environment variable is optional, it defaults to an empty string.
 
 ## Usage
 
-You can run the service locally by running 
+You can run the service locally by running:
+
 ```sh
 npm install
 npx spago run
 # or
 HOST=0.0.0.0 PORT:9001 npx spago run
 ```
-The service by default listens on host `0.0.0.0` and port `9000`, but this can be configured using the environment variables `HOST` and `PORT`
+
+The service by default listens on host `0.0.0.0` and port `9000`, but this can be configured using the environment variables `HOST` and `PORT`.
 
 ## Deployment
 
-To facilitate deployment of this service, a [Dockerfile](./docker/Dockerfile) has been provided that can be used for the deployment, e.g.:
+A [Dockerfile](./docker/Dockerfile) has been provided and it can be used for the deployment, e.g.:
 
 ```sh
 docker build -t="hivemind/sentiment-analysis" -f docker/Dockerfile .
-docker run -ti -p 9000:9000 -e HOST=0.0.0.0 -e PORT=9000 hivemind/sentiment-analysis:latest        
+docker run -ti -p 9000:9000 -e HOST=0.0.0.0 -e PORT=9000 hivemind/sentiment-analysis:latest
 ```
 
 Test it e.g. using [httpie](https://httpie.org):
+
 ```sh
 http -v POST http://localhost:9000/toxicity threshold:=0.9 sentences:='["This is a bad sentence!"]'
 ```

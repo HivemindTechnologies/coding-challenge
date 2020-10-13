@@ -1,10 +1,11 @@
-# Tweet api
+# tweet API
 
-Http backend for the tweets-ui.
+HTTP backend for `tweet-ui`.
 
 ## Hints
 
-If ui and api will run on different endpoints, you need to set http headers accordingly, e.g.:
-```
+If the UI and API will run on different endpoints, you need to set HTTP headers accordingly, e.g.:
+
+```http
 Access-Control-Allow-Origin: *
 ```

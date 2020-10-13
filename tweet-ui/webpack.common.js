@@ -67,7 +67,7 @@ module.exports = {
         // In the settings we specify its title and 'entry'
         // specifies a script to be injected into the template
         new HtmlWebpackPlugin({
-            title: "Hivemind Sentiment Analysis",
+            title: "Hivemind Tweet UI",
             template: path.resolve(__dirname, "src", "index.html"),
         }),
     ],

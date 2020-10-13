@@ -23,7 +23,6 @@ module.exports = merge(common, {
   // This plugin updates React components without losing their state
   plugins: [
     new ReactRefreshWebpackPlugin(),
-
   ],
 
 });

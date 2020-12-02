@@ -18,7 +18,7 @@ import Web.HTML.Window (document)
 main :: Effect Unit
 main = do
   baseUrl <- baseUrlEnv <#> toMaybe <#> maybe "" identity
-  log $ "baseUrl in Purescript" <> baseUrl
+  log $ "BASE_URL in Purescript: " <> baseUrl
   container <- getElementById "container" =<< (map toNonElementParentNode $ document =<< window)
   case container of
     Nothing -> throw "Container element not found."

@@ -26,7 +26,7 @@ It expects a response in the format:
 }
 ```
 
-**The `$BASE_URL` environment variable needs to be set at build time.**
+**The `$BASE_URL` environment variable needs to be set at build time and must start with http:// or https://**
 
 ## Usage
 
@@ -64,7 +64,7 @@ and open `http://localhost:9000`
 To deploy the UI as a service, you can use the provided [Dockerfile](./docker/Dockerfile) which runs the UI in an integrated HTTP server, e.g. by running:
 
 ```sh
-docker build --build-arg base_url=http://localhost:8080 -t="hivemind/tweet-ui" -f docker/Dockerfile .
+docker build --no-cache --build-arg base_url=http://localhost:8080 -t="hivemind/tweet-ui" -f docker/Dockerfile .
 docker run -ti -p 9000:9000 hivemind/tweet-ui:latest
 ```
 

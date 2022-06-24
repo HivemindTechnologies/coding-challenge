@@ -21,7 +21,7 @@
     "css-loader": "^4.3.0",
     "html-webpack-plugin": "^4.5.0",
     "http-server": "^0.12.3",
-    "jsdom": "^16.3.0",
+    "jsdom": "^16.5.0",
     "jsdom-global": "^3.0.2",
     "purescript": "^0.13.8",
     "purescript-psa": "^0.8.0",
